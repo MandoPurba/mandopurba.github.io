@@ -3,7 +3,7 @@ const soloProjects = [
       id: 1,
       title: 'Bookshelf-API',
       img: './assets/portfolio/cover.jpg',
-      link: '',
+      link: 'https://bookseft-api.herokuapp.com/books',
       github: 'https://github.com/MandoPurba/Bookshelf-API',
     },
     {
