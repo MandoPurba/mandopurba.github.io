@@ -1,5 +1,5 @@
 import React from 'react';
-import Projects from '../../config/config';
+import { soloProjects } from '../../config';
 
 
 import './portfolio.css';
@@ -11,10 +11,10 @@ const Portfolio = () => {
       <h2>Portfolio</h2>
 
       <div className="container portfolio__container">
-        {Projects.map((pro) => (
+        {soloProjects.map((pro) => (
           <article className="portfolio__item" key={pro.id}>
           <div className="portfolio__item-image">
-            <img src={pro.img} alt={pro.title} />
+            <img src={"https://source.unsplash.com/400x400/?php-curd"+pro.img} alt={pro.title} />
           </div>
           <h3>{pro.title}</h3>
           <div className="portfolio__item-cta">

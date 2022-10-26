@@ -2,6 +2,7 @@ import React from 'react';
 import { FaAward } from 'react-icons/fa';
 import { VscFolderLibrary } from 'react-icons/vsc';
 import ME from '../../assets/me.png';
+import { soloProjects, me } from "../../config";
 import './intro.css';
 
 const Intro = () => {
@@ -20,18 +21,15 @@ const Intro = () => {
             <article className="about__card">
               <FaAward className="about__icon" />
               <h5>Experience</h5>
-              <small> -1 year</small>
+              <small>{me.experience}  year</small>
             </article>
             <article className="about__card">
               <VscFolderLibrary className="about__icon" />
               <h5>Projects</h5>
-              <small>4 Completed Projects</small>
+              <small>{soloProjects.length} Completed Projects</small>
             </article>
           </div>
-          <p>
-            I am a Junior Backend developer with less than 1 year of experience, and a person who spends most of his free time doing projects/websites and learning about technological developments. <br />
-            I have started looking at programing since 2019 ({ new Date().getFullYear() - 2019 } years) and learned about development and I focus on Backend develpment more.
-          </p>
+          <p>{me.about}</p>
           <a href="#contact" className="btn btn-primary">Let's Talk</a>
         </div>
       </div>

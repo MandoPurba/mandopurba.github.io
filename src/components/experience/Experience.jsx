@@ -1,6 +1,7 @@
 import React from 'react';
 import { BsFillPatchCheckFill } from 'react-icons/bs';
 import './experience.css';
+import { skill } from "../../config";
 
 const Experience = () => {
   return (
@@ -11,43 +12,23 @@ const Experience = () => {
         <div className="experience__frontend">
           <h3>Front-end Development</h3>
           <div className="experience__content">
-          <article className="experience__details">
-              <BsFillPatchCheckFill className="experience__details-icon" />
-              <h4>HTML</h4>
-            </article>
-            <article className="experience__details">
-              <BsFillPatchCheckFill className="experience__details-icon" />
-              <h4>CSS</h4>
-            </article>
-            <article className="experience__details">
-              <BsFillPatchCheckFill className="experience__details-icon" />
-              <h4>JavaScript</h4>
-            </article>
-            <article className="experience__details">
-              <BsFillPatchCheckFill className="experience__details-icon" />
-              <h4>Tailwind</h4>
-            </article>
+            {skill.frontend.map((pro) => (
+              <article className="experience__details">
+                <BsFillPatchCheckFill className="experience__details-icon" />
+                <h4>{pro}</h4>
+              </article>
+            ))}
           </div>
         </div>
         <div className="experience__backend">
           <h3>Back-end Development</h3>
           <div className="experience__content">
-          <article className="experience__details">
-              <BsFillPatchCheckFill className="experience__details-icon" />
-              <h4>Node.js</h4>
-            </article>
+            {skill.backend.map((pro) => (
             <article className="experience__details">
               <BsFillPatchCheckFill className="experience__details-icon" />
-              <h4>Hapi.js</h4>
+              <h4>{pro}</h4>
             </article>
-            <article className="experience__details">
-              <BsFillPatchCheckFill className="experience__details-icon" />
-              <h4>PostgreSQL</h4>
-            </article>
-            <article className="experience__details">
-              <BsFillPatchCheckFill className="experience__details-icon" />
-              <h4>PHP</h4>
-            </article>
+            ))}
           </div>
         </div>
       </div>
